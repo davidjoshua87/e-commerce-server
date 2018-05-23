@@ -11,10 +11,9 @@ const users = require('./routes/users');
 const items = require('./routes/items');
 const categories = require('./routes/categories');
 
-var app = express();
+const app = express();
 
 const dbUrl = 'mongodb://toko:123@ds123500.mlab.com:23500/toko';
-
 mongoose.connect(dbUrl, (err) => {
   if(!err) {console.log('Connected to Database');}
   else {throw new Error(err);}

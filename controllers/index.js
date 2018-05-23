@@ -1,3 +1,4 @@
+require('dotenv').config()
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
@@ -15,7 +16,7 @@ module.exports = {
               token: jwt.sign({
                 id: user._id,
                 role: user.role
-              }, process.env.JWT)
+              }, 'secret')
             })
           } else {
             reject();
