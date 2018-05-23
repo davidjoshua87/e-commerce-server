@@ -8,7 +8,7 @@ const {
   isAdmin
 } = require('../middlewares/auth')
 
-// router.post('/', login);
+router.post('/login', login);
 router.get('/verifyAdmin', verifyAdmin)
 router.get('/', (req, res)=>{
   res.send('berhasil')
