@@ -1,7 +1,5 @@
-'use strict'
-
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const schema = mongoose.Schema;
 const saltRounds = 10;
 
